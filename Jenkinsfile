@@ -15,7 +15,6 @@ pipeline{
                 "http://3.93.148.217:8081/artifactory/ansible/ansible-${BUILD_ID}.zip"'
             }
         }
-    }
         stage('publish to ansible server'){
             steps{
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'AnsibleServer', \
@@ -26,5 +25,6 @@ pipeline{
                 sourceFiles: 'ansible-${BUILD_ID}.zip')], usePromotionTimestamp: false, \
                 useWorkspaceInPromotion: false, verbose: false)])
         }
+      }
     }
 } 
