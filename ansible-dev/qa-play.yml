@@ -19,12 +19,12 @@
          path: /opt/qa/spg
          state: directory
          mode: '0755'
-     - name: Create Log file
+     - name: Create Log File
        file:
          path: /opt/qa/spg/spg.log
          state: touch     
      - name: Start and enable Daemon 
-       system_service:
+       systemd_service:
           name: docker
           state: started
-          enables: yes 
+          enabled: yes 
