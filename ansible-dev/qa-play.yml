@@ -14,7 +14,7 @@
            - passwd 
            - unzip 
            - java-11*
-     - name: Create Directoty 
+     - name: Create Directory 
        file: 
          path: /opt/qa/spg
          state: directory
