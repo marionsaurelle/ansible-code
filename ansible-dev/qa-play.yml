@@ -18,6 +18,7 @@
        file: 
          path: /opt/qa/spg
          state: directory
+         mode: '0755'
      - name: Create Log file
        file:
          path: /opt/qa/spg/spg.log
